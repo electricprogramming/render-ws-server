@@ -15,7 +15,7 @@ app.get('/ping', (req, res) => {
   res.status(200).send('pong');
 });
 
-setInterval(() => fetch('https://render-com-test.vercel.app/ping'), 270000);
+setInterval(() => fetch('https://render-ws-server.vercel.app/ping'), 270000);
 
 const server = http.createServer(app);
 const wss = new WebSocket.Server({ server });
