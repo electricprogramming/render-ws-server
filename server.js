@@ -23,7 +23,6 @@ const wss = new WebSocket.Server({ server });
 // Broadcast to all clients except sender
 wss.on('connection', (ws) => {
   console.log('Client connected');
-  ws.send('✅ Connected to broadcast WebSocket server');
 
   ws.on('message', (message) => {
     console.log('Broadcasting:', message);
